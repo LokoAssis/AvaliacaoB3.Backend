@@ -3,7 +3,15 @@ OBS: Conforme repassado ao recrutador, sou desenvolvedor backend, e como tenho m
 Prefiro ser transparente referente a não ser especialista em frontend e com isso evitar possiveis futuros problemas.
 
 1) Execução do projeto e teste da solução:
-Ao executar a solution do backend, automaticamente será aberto uma pagina local do Swagger em seu browser, onde é possivel realizar chamadas de teste através do endpoint POST "api/calculos/cdb". Segue imagem abaixo de exemplo:
+Ao executar a solution do backend, automaticamente será aberto uma pagina local do Swagger em seu browser, onde é possivel realizar chamadas de teste através do endpoint POST "api/calculos/cdb". 
+
+Exemplo de JSON a ser enviado:
+{
+ "valorInicial": 1000,
+ "prazo": 12
+}
+
+Segue imagem abaixo de exemplo:
 
 ![image](https://user-images.githubusercontent.com/45275039/206273060-7cf950b1-d0d2-493f-92c3-8e96396389dd.png)
 
