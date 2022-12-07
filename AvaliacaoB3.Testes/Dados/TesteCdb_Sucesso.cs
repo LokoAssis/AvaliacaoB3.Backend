@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AvaliacaoB3.Testes.Dados
 {
-    public class TesteCalculoCdb_Sucesso : IEnumerable<object[]>
+    public class TesteCdb_Sucesso : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {

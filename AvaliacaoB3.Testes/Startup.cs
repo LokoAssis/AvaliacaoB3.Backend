@@ -13,7 +13,7 @@ namespace AvaliacaoB3.Testes
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ICalculoCdbServico, CalculoCdbServico>();
+            services.AddTransient<ICdbServico, CdbServico>();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace AvaliacaoB3.ViewModels
 {
-    public class CalculoCdbRequestViewModel : BaseViewModel
+    public class CdbRequestViewModel : BaseViewModel
     {
         public double ValorInicial { get; set; }
 

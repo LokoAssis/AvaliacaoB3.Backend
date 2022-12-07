@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AvaliacaoB3.Dominio.Dto
+namespace AvaliacaoB3.Dominio.Entidades
 {
-    public class BaseDto
+    public abstract class EntidadeBase
     {
         public ValidationResult ValidationResult { get; set; }
 
-        public BaseDto()
+        protected EntidadeBase()
         {
             ValidationResult = new ValidationResult();
         }

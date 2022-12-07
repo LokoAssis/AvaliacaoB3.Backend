@@ -10,25 +10,25 @@ namespace AvaliacaoB3.Controllers
     public class CalculoController : BaseController
     {
         private readonly IMapper _mapper;
-        private readonly ICalculoCdbServico _calculoServico;
+        private readonly ICdbServico _cdbServico;
 
-        public CalculoController(ICalculoCdbServico calculoServico, IMapper mapper)
+        public CalculoController(ICdbServico cdbServico, IMapper mapper)
         {
-            _calculoServico = calculoServico;
+            _cdbServico = cdbServico;
             _mapper = mapper;
         }
 
         [HttpPost("calculos/cdb")]
-        [ProducesResponseType(typeof(CalculoCdbResponseViewModel), StatusCodes.Status200OK)]
-        public IActionResult Criar([FromBody] CalculoCdbRequestViewModel calculoCdbRequestViewModel)
+        [ProducesResponseType(typeof(CdbResponseViewModel), StatusCodes.Status200OK)]
+        public IActionResult Criar([FromBody] CdbRequestViewModel cdbRequestViewModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
 
-            var result = _calculoServico.CalcularCdb(_mapper.Map<CalculoCdbRequestDto>(calculoCdbRequestViewModel));
-            return Response(_mapper.Map<CalculoCdbResponseViewModel>(result));
+            var result = _cdbServico.CalcularCdb(_mapper.Map<CdbRequestDto>(cdbRequestViewModel));
+            return Response(_mapper.Map<CdbResponseViewModel>(result));
         }
     }
 }

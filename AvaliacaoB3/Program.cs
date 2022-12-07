@@ -1,6 +1,7 @@
 using AutoMapper;
 using AvaliacaoB3.Aplicacao.ViewModels;
 using AvaliacaoB3.Dominio.Dto;
+using AvaliacaoB3.Dominio.Entidades;
 using AvaliacaoB3.Dominio.Interfaces.Servicos;
 using AvaliacaoB3.Dominio.Servicos;
 using AvaliacaoB3.ViewModels;
@@ -11,12 +12,12 @@ builder.Services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.Re
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<ICalculoCdbServico, CalculoCdbServico>();
+builder.Services.AddScoped<ICdbServico, CdbServico>();
 
 builder.Services.AddSingleton(new MapperConfiguration(config =>
 {
-    config.CreateMap<CalculoCdbRequestViewModel, CalculoCdbRequestDto>();
-    config.CreateMap<CalculoCdbResponseDto, CalculoCdbResponseViewModel>();
+    config.CreateMap<CdbRequestViewModel, CdbRequestDto>();
+    config.CreateMap<Cdb, CdbResponseViewModel>();
 }).CreateMapper());
 
 var app = builder.Build();

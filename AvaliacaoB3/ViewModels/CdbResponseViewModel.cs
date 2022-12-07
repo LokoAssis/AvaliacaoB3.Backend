@@ -2,7 +2,7 @@
 
 namespace AvaliacaoB3.Aplicacao.ViewModels
 {
-    public class CalculoCdbResponseViewModel : BaseViewModel
+    public class CdbResponseViewModel : BaseViewModel
     {
         public double ValorLiquido { get; set; }
 

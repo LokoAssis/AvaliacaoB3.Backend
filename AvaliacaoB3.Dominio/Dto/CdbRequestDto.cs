@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AvaliacaoB3.Dominio.Dto
 {
-    public class CalculoCdbRequestDto : BaseDto
+    public class CdbRequestDto
     {
         public double ValorInicial { get; set; }
 

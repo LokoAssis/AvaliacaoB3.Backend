@@ -2,7 +2,7 @@
 
 namespace AvaliacaoB3.Testes.Dados
 {
-    public class TesteCalculoCdb_Invalido : IEnumerable<object[]>
+    public class TesteCdb_Invalido : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {

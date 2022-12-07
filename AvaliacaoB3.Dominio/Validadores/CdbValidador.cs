@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace AvaliacaoB3.Dominio.Validadores
 {
-    public class CalculoCdbValidador : AbstractValidator<CalculoCdbRequestDto>
+    public class CdbValidador : AbstractValidator<CdbRequestDto>
     {
-        public CalculoCdbValidador()
+        public CdbValidador()
         {
             RuleFor(x => x.ValorInicial)
                 .GreaterThan(0).WithMessage("Valor informado deve ser positivo.");
